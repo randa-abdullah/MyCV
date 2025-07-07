@@ -34,16 +34,3 @@ h2 {
 .nav-menu a:hover {color: rgb(22, 175, 127);}
 
 
-@media (prefers-color-scheme: dark) {
-    * {background-color: rgb(18, 18, 18); }
-
-    body {color: rgb(238, 238, 238); }
-
-    h1 {color: rgb(233, 30, 99);}
-
-    h2 {color: rgb(76, 175, 80); box-shadow: 5px 5px 5px rgba(255, 255, 255, 0.1); }
-
-    .nav-menu a {color: rgb(233, 30, 99);}
-
-    .nav-menu a:hover {color: rgb(76, 175, 80);}
-}
