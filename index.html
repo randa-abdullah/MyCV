@@ -12,61 +12,128 @@
     <link rel="stylesheet" href="MyPort.css">
     </head>
 
+
+    <div class="container-fluid">   
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Navigation Menu</title>
+    </head>
+
 <body>
-<nav>
-    <ul class="nav-menu">
-        <li><a href="#About">About</a></li>
-        <li><a href="#Education">Education</a></li>
-        <li><a href="#Skills">Skills</a></li>
-        <li><a href="#Projects">Projects</a></li>
-        <li><a href="#Contact">Contact</a></li>
-    </ul>
-</nav>
+    <button id="toggle-mode" class="btn btn-dark">Switch to Dark Mode</button>
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <div class="container-fluid justify-content-center ">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#About">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#Education">Education</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#Skills">Skills</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#Projects">Projects</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#Contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
 
-        <h5>never give up <br> because great things<br>take time</h2>
+            <h1 class="text-center mt-4">
+            <img src="0.png" alt="My Photo" style="width:90px; vertical-align: middle">
+            Randa Alhindi </h1>
+    </div> 
 
-        <h1>
-        <img src="0.png" alt="My Photo" style="width:90px; vertical-align: middle">
-        Randa Alhindi </h1>
+        <div class="container" >       
+            <h2 id="About Me" >About Me</h2>
+                <div class ="ms-4">
+            <p>I am a senior Computer Science student at Qassim University. </p>
+            <p>Passionate about web development and programming</p>
+            <p>currently learning HTML, CSS, and JavaScript.</p>
+            <p>My goal is to become a full-stack developer and contribute to innovative projects.</p>
+                </div> 
 
-        <h2 id="About Me" >About Me</h2>
-        <p>I am a senior Computer Science student at Qassim University. </p>
-        <p>Passionate about web development and programming</p>
-        <p>currently learning HTML, CSS, and JavaScript.</p>
+            <h2 id="Education">Education</h2>
+                <div class ="ms-3">
+                    <ul type="circle" >
+                    <li>Bachelor of Computer Science - Qassim University</li>
+                    <li>Expected Graduation: 2025</li>
+                    <li>Relevant Coursework: Data Structures, Algorithms, Database Management, Web Development</li>
+                </div>
+            </ul>
 
-        <h2 id="Education">Education</h2>
-        <ul type="circle" >
-            <li>Bachelor of Computer Science - Qassim University</li>
-            <li>Expected Graduation: 2025</li>
-        </ul>
+            <h2 id="Skills" >Skills</h2>
+            <div class ="ms-3">
+                <ul type="circle" >
+                    <li>HTML</li>
+                    <li>CSS</li>
+                    <li>GitHub & Git</li>
+                    <li>JAVA</li>
+                    <li>Python</li>
+                    <li>JavaScript</li>
+                    <li>SQL</li>
+                    <li>Problem Solving</li>
+                    <li>Teamwork</li>
+            </div>
+            
+            </ul>
+            <h2 id="Projects">Projects</h2>
+            <div class ="ms-3">
+                <ul type ="circle">
+                    <li>My personal portfolio website</li>
+                    <li>+MUNJIZ</li>
+                    <li>University Database</li>
 
-        <h2 id="Skills" >Skills</h2>
-        <ul type="circle" >
-            <li>HTML</li>
-            <li>CSS</li>
-            <li>GitHub & Git</li>
-            <li>JAVA</li>
-            <li>Python</li>
-        </ul>
+                    
+            </div>    
+            </ul>
 
-        <h2 id="Projects">Projects</h2>
-        <ul type ="circle">
-            <li>My personal portfolio website</li>
-            <li>+MUNJIZ</li>
-            <li>University Database</li>
-
-        </ul>
-
-        <h2 id="Contact" >Contact</h2>
-        <p>* Email: <a href="mailto:randaa.alhindi@gmail.com">randaa.alhindi@gmail.com</a></p>
-        <p>* GitHub: <a href = "https://github.com/randa-abdullah">github.com/randa-abdullah</a> </p>
-        <p>* LinkedIn: <a href = "https://www.linkedin.com/in/randa-alhindi/">linkedin.com/in/randa-alhindi</a></p>
+            <h2 id="Contact" >Contact</h2>
+            <div class ="ms-4">
+                <p>* Email: <a href="mailto:randaa.alhindi@gmail.com">randaa.alhindi@gmail.com</a></p>
+                <p>* GitHub: <a href = "https://github.com/randa-abdullah">github.com/randa-abdullah</a> </p>
+                <p>* LinkedIn: <a href = "https://www.linkedin.com/in/randa-alhindi/">linkedin.com/in/randa-alhindi</a></p>
+            </div>    
+        </div>
 
         <hr>
+        <footer class="text-center mt-4">
+            <p>&copy; 2024 Randa Alhindi. All rights reserved.</p>
 
-        <button type ="button" onclick ="document.getElementById('time').innerHTML = Date()"> time </button>
-        <p id="time"></p>
+    <script>
+    // جلب الزر والعناصر
+    const toggleButton = document.getElementById('toggle-mode');
+    const body = document.body;
+    
+    // التحقق من الوضع الحالي عند تحميل الصفحة
+    if (localStorage.getItem('mode') === 'dark') {
+        body.classList.add('dark-mode');
+        toggleButton.textContent = 'Switch to Light Mode';
+    } else {
+        body.classList.add('light-mode');
+        toggleButton.textContent = 'Switch to Dark Mode';
+    }
+    
+    // إضافة وظيفة لتبديل الوضع عند النقر على الزر
+    toggleButton.addEventListener('click', () => {
+        body.classList.toggle('dark-mode');
+        body.classList.toggle('light-mode');
         
+        // حفظ الوضع في localStorage
+        if (body.classList.contains('dark-mode')) {
+            localStorage.setItem('mode', 'dark');
+            toggleButton.textContent = 'Switch to Light Mode';
+        } else {
+            localStorage.setItem('mode', 'light');
+            toggleButton.textContent = 'Switch to Dark Mode';
+        }
+    });
+</script>        
 
 
         
