@@ -48,10 +48,21 @@ body.dark-mode {
 .navbar-nav .nav-link.dark-mode {color: #F5F0CF; }
 .navbar-nav .nav-link.light-mode {color: black;  }
 .navbar-nav .nav-link:hover {color: #A7DADA; }
-
-
 #toggle-mode {
     position: fixed;
     top: 20px;     
     right: 20px;   
     z-index: 1000; }
+
+@keyframes rotate-icon {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+#icon {
+    animation: rotate-icon 10s linear infinite;
+}
